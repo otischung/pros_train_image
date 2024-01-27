@@ -4,7 +4,8 @@ RUN apt update && apt install -y tmux
 RUN apt-get clean autoclean
 RUN apt-get autoremove --yes
 RUN rm -rf /var/lib/{apt,dpkg,cache,log}/
-RUN rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
+RUN rm -rf /var/cache/apt/archives
+RUN rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /workspaces
 
